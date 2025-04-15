@@ -46,7 +46,7 @@ body {
   border: 3px solid #ffffff;
 }
 .profile{
-  width: 250px;
+  width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
