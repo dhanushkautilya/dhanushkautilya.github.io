@@ -1,97 +1,117 @@
-html {
-  font-family: "Source Sans Pro", sans-serif;
-  scroll-behavior: smooth;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  margin: 0;
-  background-image: url(assets/motherboard-wallpaper.jpg);
-  background-size: cover;
-  background-attachment: fixed;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  color: #212529;
+  line-height: 1.6;
+  padding: 2rem;
 }
 
-.text-align-center {
-  text-align: center;
-}
-
-.white-text {
-  color: white;
-}
-
-.pb-50 {
-  padding-bottom: 50px;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.align-center {
+/* Header with image and intro */
+.header-flex {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  display: flex;
   align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.page-header {
-  background-color: darkslategray;
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
 }
 
-.nav-item {
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Sections */
+section {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+section ul li {
+  margin-bottom: 1rem;
+}
+
+/* Contact Links */
+.contact a {
+  color: #007bff;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-.nav-item:hover {
-  color: steelblue;
+.contact a:hover {
+  text-decoration: underline;
 }
 
-.hero-image {
-  background-image: url(assets/lfz-logo.png);
-  background-color: #303b43;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto 80%;
-  height: 350px;
+/* Chatbot styling */
+.chatbot iframe,
+#chatbox {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding-top: 1rem;
 }
 
-.student-name {
-  font-size: 80px;
-  background-color: #303b43;
-  border-top: 5px double white;
-  border-bottom: 5px double white;
+#userInput {
+  width: 75%;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-.about-section {
-  background-color: whitesmoke;
+button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.about-image {
-  max-height: 80%;
-  border: 6px solid slategray;
+#chatResponse {
+  margin-top: 1rem;
+  font-style: italic;
 }
 
-.text-align-reset {
-  text-align: initial;
-}
-
-.tech-section {
-  background-color: gainsboro;
-}
-
-.projects-section {
-  background-color: snow;
-}
-
-.contact-section {
-  background-color: #303b43;
-}
-
-.blue-text {
-  color: lightblue;
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #6c757d;
 }

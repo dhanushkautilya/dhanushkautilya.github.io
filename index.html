@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dhanush Portfolio</title>
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhanush Kammaripalle | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="container text-align-center">
-    <header class="row justify-between align-center white-text page-header">
-      <h1 class="col-4">Dhanush Kammaripalle</h1>
-      <nav class="row col-6 justify-evenly">
-        <a href="#about" class="nav-item white-text">About</a>
-        <a href="#tech" class="nav-item white-text">Technologies</a>
-        <a href="#projects" class="nav-item white-text">Projects</a>
-        <a href="#contact" class="nav-item white-text">Contact</a>
-      </nav>
-    </header>
+  <header class="header-flex">
+    <img src="image.jpeg" alt="Dhanush" class="profile-pic">
+    <div>
+      <h1>Thirumala Dhanush Kammaripalle</h1>
+      <p>Certified Senior Salesforce Developer | 4+ Years of Experience</p>
+    </div>
+  </header>
 
-    <div class="row justify-center align-center white-text hero-image">
-      <h1 class="student-name">DHANUSH</h1>
+  <section class="chatbot">
+    <h2>Ask Me Anything</h2>
+    <div id="chatbox">
+      <input type="text" id="userInput" placeholder="Ask me about my experience..." />
+      <button onclick="getBotResponse()">Ask</button>
+      <div id="chatResponse"></div>
     </div>
+  </section>
 
-    <div id="about" class="row justify-evenly align-center pb-50 about-section">
-      <h1 class="col-12">ABOUT ME</h1>
-      <img src="assets/image.jpg" class="col-3 about-image" alt="Dhanush Portrait">
-      <div class="col-5 text-align-reset">
-        <p>Hi! I'm Dhanush, a Salesforce Developer with 4+ years of experience designing scalable CRM solutions across Healthcare, Insurance, and Hospitality.</p>
-        <p>Skilled in Apex, Lightning Web Components, and Visualforce, I build intelligent and user-friendly applications. Explore my tech stack and projects below!</p>
-      </div>
-    </div>
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      Experienced Salesforce Developer with a strong background in CRM system design, Apex, Visualforce, LWC, and cross-industry experience in Healthcare, Insurance, and Hospitality. Passionate about building secure, scalable, and impactful Salesforce solutions.
+    </p>
+  </section>
 
-    <div id="tech" class="row justify-evenly pb-50 tech-section">
-      <h1 class="col-12">TECHNOLOGIES</h1>
-      <img src="assets/html-logo.png" class="col-1" alt="HTML 5 logo">
-      <img src="assets/Salesforce-logo.jpg" class="col-1" alt="Salesforce logo">
-    </div>
-    
-    <div id="projects" class="row justify-evenly pb-50 projects-section">
-      <h1 class="col-12">MY PROJECTS</h1>
-      <ul>
-        <li><strong>Lightning Datatable with Inline Editing:</strong> <a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git">GitHub</a></li>
-        <li><strong>Dynamic Territory Manager:</strong> <a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git">GitHub</a></li>
-      </ul>
-    </div>
+  <section class="experience">
+    <h2>Work Experience</h2>
+    <ul>
+      <li><strong>Workday (Virtual Labs Inc.)</strong> - Sr. Salesforce Developer (Jul 2024 – Mar 2025)</li>
+      <li><strong>Workday (Virtual Labs Inc.)</strong> - Salesforce Developer (May 2023 – Jun 2024)</li>
+      <li><strong>Verzeo Pvt. Ltd.</strong> - Salesforce Developer/Administrator (May 2021 – Jan 2022)</li>
+      <li><strong>Indian Servers</strong> - Salesforce Developer Intern (Aug 2020 – Jan 2021)</li>
+    </ul>
+  </section>
 
-    <div id="contact" class="row justify-center pb-50 white-text contact-section">
-      <h1 class="col-12">CONTACT ME</h1>
-      <p class="col-12">Connect with me on <a href="https://github.com/dhanushkautilya" class="nav-item blue-text">GitHub</a> or email <a href="mailto:dhanushkautilya@gmail.com" class="blue-text">dhanushkautilya@gmail.com</a></p>
-    </div>
-  </div>
+  <section class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Lightning Datatable with Inline Editing:</strong> <a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git">GitHub</a></li>
+      <li><strong>Dynamic Territory Manager:</strong> <a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git">GitHub</a></li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:dhanushkautilya@gmail.com">dhanushkautilya@gmail.com</a></p>
+    <p>LinkedIn: <a href="http://www.linkedin.com/in/dhanush-kammaripalle-16aa93219">dhanush-kammaripalle</a></p>
+    <p>Trailblazer: <a href="https://www.salesforce.com/trailblazer/mlb1ltng5cqorsfi3h">DhanushKammaripalle</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dhanush Kammaripalle</p>
+  </footer>
 </body>
 </html>
