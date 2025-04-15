@@ -11,19 +11,31 @@ body {
   color: #212529;
   line-height: 1.6;
   padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
 }
+.header-flex h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-flex p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
 
 /* Header with image and intro */
 .header-flex {
-  background-color: #343a40;
-  color: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 2rem;
   flex-wrap: wrap;
+  background-color: #343a40;
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
 }
 
 .profile-pic {
