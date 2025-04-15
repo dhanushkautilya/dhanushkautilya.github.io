@@ -1,126 +1,97 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(to right, #f8f9fa, #e9ecef);
-  color: #212529;
-  line-height: 1.6;
-  padding: 2rem;
+  margin: 0;
+  background-image: url(assets/motherboard-wallpaper.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.header-flex {
-  background-color: #343a40;
-  color: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ffffff;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 1.2rem;
-}
-
-section {
-  background-color: #ffffff;
-  padding: 1.5rem 2rem;
-  margin-bottom: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-  font-size: 1.8rem;
-  color: #007bff;
-  margin-bottom: 1rem;
+.text-align-center {
   text-align: center;
 }
 
-section ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-}
-
-section ul li {
-  margin-bottom: 1rem;
-}
-
-.contact a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #6c757d;
-}
-
-/* Chatbox Styling */
-#chatbox {
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding-top: 1rem;
-}
-
-#userInput {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  outline: none;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-}
-
-button {
-  padding: 0.5rem 1.5rem;
-  background-color: #007bff;
+.white-text {
   color: white;
-  border: none;
-  border-radius: 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #0056b3;
+.pb-50 {
+  padding-bottom: 50px;
 }
 
-#chatResponse {
-  margin-top: 0.5rem;
-  font-style: italic;
-  text-align: center;
-  max-width: 700px;
+.justify-center {
+  justify-content: center;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.page-header {
+  background-color: darkslategray;
+}
+
+.nav-item {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: steelblue;
+}
+
+.hero-image {
+  background-image: url(assets/lfz-logo.png);
+  background-color: #303b43;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  height: 350px;
+}
+
+.student-name {
+  font-size: 80px;
+  background-color: #303b43;
+  border-top: 5px double white;
+  border-bottom: 5px double white;
+}
+
+.about-section {
+  background-color: whitesmoke;
+}
+
+.about-image {
+  max-height: 80%;
+  border: 6px solid slategray;
+}
+
+.text-align-reset {
+  text-align: initial;
+}
+
+.tech-section {
+  background-color: gainsboro;
+}
+
+.projects-section {
+  background-color: snow;
+}
+
+.contact-section {
+  background-color: #303b43;
+}
+
+.blue-text {
+  color: lightblue;
 }
