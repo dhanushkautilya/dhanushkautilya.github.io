@@ -406,8 +406,4 @@ body {
 .page section, .page header {
   animation: fadeInUp 1s ease-out;
 }
-.page > section,
-.page > header {
-  width: 100%;
-  max-width: 900px;
-}
+
