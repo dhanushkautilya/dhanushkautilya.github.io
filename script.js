@@ -19,4 +19,23 @@ function getBotResponse() {
     responseBox.innerText = response;
     document.getElementById("userInput").value = "";
   }
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+
+  const revealOnScroll = () => {
+    sections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop < windowHeight - 100) {
+        section.style.opacity = "1";
+        section.style.transform = "translateY(0)";
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // Trigger once on load
+});
   
