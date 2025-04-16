@@ -357,22 +357,28 @@ button:hover {
   animation: fadeIn 0.5s ease forwards;
 }
 
-/* Scroll trigger JS helper (optional if using pure CSS, but scroll-triggered animations need JS) */
-html, body {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-/* Fullscreen scroll sections */
+/* Force each section to fill the screen */
 .page {
   height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  align-items: center;
   padding: 3rem 2rem;
+  box-sizing: border-box;
 }
+
+/* Smooth scrolling for full-page transitions */
+html, body {
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
 
 body {
   scroll-snap-type: y mandatory;
