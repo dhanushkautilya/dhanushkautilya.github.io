@@ -5,114 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dhanush Kammaripalle | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
+
+  <!-- Floating Scroll Nav -->
+  <nav class="floating-nav">
+    <a href="#page1">Home</a>
+    <a href="#page2">About</a>
+    <a href="#page3">Experience</a>
+    <a href="#page4">Projects</a>
+    <a href="#page5">Contact</a>
+  </nav>
+
+  <!-- Page 1 -->
   <div class="page" id="page1">
-  <header class="header-flex">
-    <a href="https://www.salesforce.com" target="_blank">
-      <img src="assets/Salesforce-logo.jpg" class="profile-pic" >
-    </a>
-        <div>
-      <h1>Thirumala Dhanush Kammaripalle</h1>
-      <p>Certified Senior Salesforce Developer | 4+ Years of Experience</p>
-    </div>
-  </header>
-  
+    <header class="header-flex">
+      <a href="https://www.salesforce.com" target="_blank">
+        <img src="assets/Salesforce-logo.jpg" class="profile-pic" alt="Salesforce Logo">
+      </a>
+      <div>
+        <h1>Thirumala Dhanush Kammaripalle</h1>
+        <p class="typed-text"></p>
+      </div>
+    </header>
 
-  <section class="chatbot">
-    <h2>Ask Me Anything</h2>
-    <div id="chatbox">
-      <input type="text" id="userInput" placeholder="Ask me about my experience..." />
-      <button onclick="getBotResponse()">Ask</button>
-      <div id="chatResponse"></div>
-    </div>
-  </section>
-</div>
+    <section class="chatbot">
+      <h2>Ask Me Anything</h2>
+      <div id="chatbox">
+        <input type="text" id="userInput" placeholder="Ask me about my experience..." />
+        <button onclick="getBotResponse()">Ask</button>
+        <div id="chatResponse"></div>
+      </div>
+    </section>
+  </div>
 
-<div class="page" id="page2">
-  <section class="about">
-    <a href="index2.html">
-      <img src="assets/dk.jpeg" class="profile" >
-    </a>
-        <h2>About Me</h2>
-    <p>
-      Experienced Salesforce Developer with a strong background in CRM system design, Apex, Visualforce, LWC, and cross-industry experience in Healthcare, Insurance, and Hospitality. Passionate about building secure, scalable, and impactful Salesforce solutions.
-    </p>
-  </section>
-</div>
+  <!-- Page 2 -->
+  <div class="page" id="page2">
+    <section class="about">
+      <a href="index2.html">
+        <img src="assets/dk.jpeg" class="profile" alt="Dhanush">
+      </a>
+      <h2>About Me</h2>
+      <p>
+        Experienced Salesforce Developer with expertise in CRM system design using Apex, LWC, Visualforce, and REST APIs. Proven impact across Healthcare, Insurance, and Hospitality sectors through secure and scalable solutions.
+      </p>
+    </section>
+  </div>
 
-<div class="page" id="page3">
-  <section class="experience">
-    <h2>Work Experience</h2>
-    <ul>
-      <li>
-        <strong>Sr. Salesforce Developer – Workday (Jul 2024 – Mar 2025)</strong><br />
-        • Led the ITGC project ensuring SOX-compliant access control after opportunity closure<br />
-        • Developed Apex logic for Lead Enhancement project, boosting lead conversion rates<br />
-        • Created custom LWCs, Aura components, and Visualforce pages to optimize Sales Cloud UX<br />
-        • Integrated Einstein Bots & Next Best Action to personalize support and improve resolution time
-      </li>
-      <li>
-        <strong>Salesforce Developer – Workday (May 2023 – Jun 2024)</strong><br />
-        • Built and deployed Apex Triggers, Visualforce pages, and Batch/Future/Queueable jobs<br />
-        • Integrated Salesforce with MuleSoft and REST/SOAP APIs<br />
-        • Ensured high data integrity and automation efficiency using SOQL and asynchronous Apex
-      </li>
-      <li>
-        <strong>Salesforce Developer/Administrator – Verzeo Pvt. Ltd. (May 2021 – Jan 2022)</strong><br />
-        • Customized Visualforce for mobile UX, built Scheduled/Batched Apex and Workflow Rules<br />
-        • Used AppExchange tools like DocuSign and Strike Address Verification
-      </li>
-      <li>
-        <strong>Salesforce Intern – Indian Servers (Aug 2020 – Jan 2021)</strong><br />
-        • Rebuilt Lightning record and home pages to enhance UX for sales users<br />
-        • Developed Apex classes and LWCs based on dynamic sales requirements
-      </li>
-    </ul>
-  </section>
-  
-</div>
+  <!-- Page 3 -->
+  <div class="page" id="page3">
+    <section class="experience">
+      <h2>Work Experience</h2>
+      <ul>
+        <li><strong>Sr. Salesforce Developer – Workday (Jul 2024 – Mar 2025)</strong><br />
+        • Led SOX-compliant ITGC project<br />
+        • Built Apex automation & Einstein integrations<br />
+        • Developed custom LWCs and enhanced Sales UX</li>
+        <li><strong>Salesforce Developer – Workday (May 2023 – Jun 2024)</strong><br />
+        • Developed triggers, batch/future/queueable methods<br />
+        • Integrated with MuleSoft APIs</li>
+        <li><strong>Salesforce Admin/Dev – Verzeo (May 2021 – Jan 2022)</strong><br />
+        • Built Visualforce mobile pages, AppExchange tools</li>
+        <li><strong>Intern – Indian Servers (Aug 2020 – Jan 2021)</strong><br />
+        • Customized Lightning pages, built LWCs</li>
+      </ul>
+    </section>
+  </div>
 
-<div class="page" id="page4">
-  <section class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Lightning Datatable with Picklist Inline Editing & Color Disposition:</strong><br />
-        Built a Lightning Web Component to manage Customer SKU Heatmap records with inline picklist editing, color-coded statuses, custom data types, and backend Apex integration.
-        <br /><a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git" target="_blank">GitHub</a>
-      </li>
-      <li>
-        <strong>Dynamic Territory Manager (DTM):</strong><br />
-        Created a configurable Salesforce-native engine for assigning territories using Apex, LWC, Custom Metadata, and real-time alerts with Platform Events. Includes visual maps and admin dashboards.
-        <br /><a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git" target="_blank">GitHub</a>
-      </li>
-    </ul>
-  </section>
-  
-</div>
+  <!-- Page 4 -->
+  <div class="page" id="page4">
+    <section class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>Lightning Datatable with Picklist Inline Editing:</strong><br />
+          Interactive LWC to manage SKU heatmap with dynamic color states and inline editing.
+          <br /><a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git" target="_blank">View on GitHub</a>
+        </li>
+        <li>
+          <strong>Dynamic Territory Manager (DTM):</strong><br />
+          Configurable engine using Apex, LWC, Platform Events, and Custom Metadata.
+          <br /><a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git" target="_blank">View on GitHub</a>
+        </li>
+      </ul>
+    </section>
+  </div>
 
-<div class="page" id="page4">
-<section class="contact">
-  <h2>Contact</h2>
-  <p><strong>Email:</strong> <a href="mailto:dhanushkautilya@gmail.com">dhanushkautilya@gmail.com</a></p>
-  <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/dhanush-kammaripalle-16aa93219" target="_blank">dhanush-kammaripalle</a></p>
-  <p><strong>Trailblazer:</strong> <a href="https://www.salesforce.com/trailblazer/mlb1ltng5cqorsfi3h" target="_blank">DhanushKammaripalle</a></p>
+  <!-- Page 5 -->
+  <div class="page" id="page5">
+    <section class="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:dhanushkautilya@gmail.com">dhanushkautilya@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/dhanush-kammaripalle-16aa93219">dhanush-kammaripalle</a></p>
+      <p><strong>Trailblazer:</strong> <a href="https://www.salesforce.com/trailblazer/mlb1ltng5cqorsfi3h">DhanushKammaripalle</a></p>
 
-  <h3>Certifications</h3>
-  <ul>
-    <li>Salesforce Certified Administrator</li>
-    <li>Salesforce Platform Developer I & II</li>
-    <li>Salesforce AI Associate</li>
-    <li>Salesforce AI Specialist</li>
-  </ul>
-</section>
-
-
-  <footer>
-    <p>&copy; 2025 Dhanush Kammaripalle</p>
-  </footer>
-</div>
+      <h3>Certifications</h3>
+      <div class="carousel">
+        <div class="carousel-item">Administrator</div>
+        <div class="carousel-item">Platform Developer I</div>
+        <div class="carousel-item">Platform Developer II</div>
+        <div class="carousel-item">AI Associate</div>
+        <div class="carousel-item">AI Specialist</div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2025 Dhanush Kammaripalle</p>
+    </footer>
+  </div>
 </body>
 </html>

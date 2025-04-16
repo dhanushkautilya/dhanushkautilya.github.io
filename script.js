@@ -38,4 +38,22 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll(); // Trigger once on load
 });
+// Typing effect in header
+const typed = new Typed('.typed-text', {
+  strings: [
+    'Certified Salesforce Developer',
+    'Lightning Web Components Expert',
+    'Trailblazer | Innovator | Builder'
+  ],
+  typeSpeed: 60,
+  backSpeed: 30,
+  loop: true
+});
+
+// Placeholder for chatbot
+function getBotResponse() {
+  const input = document.getElementById('userInput').value;
+  const response = `You asked: "${input}" - I’ll get back to you soon! 😊`;
+  document.getElementById('chatResponse').innerText = response;
+}
   
