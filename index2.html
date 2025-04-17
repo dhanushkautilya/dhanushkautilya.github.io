@@ -1,27 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dhanush's Page</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f7fa;
-      text-align: center;
-      padding: 3rem;
-    }
-    img {
-      width: 200px;
-      border-radius: 50%;
-      margin-top: 2rem;
-      border: 4px solid #6f42c1;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhanush Kammaripalle | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Welcome to Dhanush's World 🌐</h1>
-  <p>This is just a placeholder for <strong>index2.html</strong>. More to come soon!</p>
-  <img src="assets/dk.jpeg" alt="Dhanush">
+
+  <!-- Floating Scroll Nav -->
+  <nav class="floating-nav">
+    <a href="#page1">Home</a>
+    <a href="#page2">About</a>
+    <a href="#page3">Experience</a>
+    <a href="#page4">Projects</a>
+    <a href="#page5">Contact</a>
+  </nav>
+
+  <!-- Page 1 -->
+  <div class="page" id="page1">
+    <section class="header-flex">
+      <a href="https://www.salesforce.com" target="_blank">
+        <img src="assets/Salesforce-logo.jpg" class="profile-pic" alt="Salesforce Logo">
+      </a>
+      <div>
+        <h1>Thirumala Dhanush Kammaripalle</h1>
+        <p class="typed-text"></p>
+      </div>
+    </section>
+
+    <section class="chatbot">
+      <h2>Ask Me Anything</h2>
+      <div id="chatbox">
+        <input type="text" id="userInput" placeholder="Ask me about my experience..." />
+        <button onclick="getBotResponse()">Ask</button>
+        <div id="chatResponse"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Page 2 -->
+  <div class="page" id="page2">
+    <section class="about">
+      
+        <img src="assets/dk.jpeg" class="profile" alt="Dhanush">
+     
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m <strong>Thirumala Dhanush Kammaripalle</strong> — a lifelong tech enthusiast and someone who’s always been curious about how technology shapes the world around us. Ever since I was a kid, I found myself drawn to computers, breaking things down to understand how they work and trying to build my own ideas into reality.
+      </p>
+      <p>
+        This passion led me to pursue a <strong>Bachelor’s in Computer Science</strong> from Jawaharlal Nehru Technological University and later a <strong>Master’s in Computer Science</strong> at George Mason University. During these years, I explored various domains within tech, but what stuck with me the most was the ability to use software to solve real-world problems and make things better — faster, smarter, and easier.
+      </p>
+      <p>
+        Professionally, I’ve spent over 4 years working as a <strong>Salesforce Certified Developer</strong>, building and optimizing enterprise-level CRM solutions. My work spans Apex, LWC, Visualforce, and integrations across Sales, Service, and Community Clouds. I take pride in crafting solutions that not only meet business goals but also improve user experience and system scalability.
+      </p>
+      <p>
+        Beyond Salesforce, I’m genuinely passionate about <strong>Artificial Intelligence</strong> and the incredible potential of <strong>Generative AI</strong> in transforming industries. I spend time learning about how these technologies can be applied in CRM, automation, personalization, and everyday tools we use.
+      </p>
+      <p>
+        Outside of work, I’m a big fan of sports. I love playing and watching <strong>basketball, badminton, and cricket</strong>. Whether it’s shooting hoops with friends or catching a live match, sports keep me grounded, energized, and inspired. They’ve taught me teamwork, discipline, and how to thrive under pressure — qualities that also fuel my professional life.
+      </p>
+      <p>
+        I’m always looking to learn, build, and connect with people who share the same passion for tech and innovation. Whether it's building cool stuff or exploring new ideas, I’m here for the ride 🚀.
+      </p>
+    </section>
+  </div>
+  
+
+  <!-- Page 3 -->
+  <div class="page" id="page3">
+    <section class="experience">
+      <h2>Work Experience</h2>
+      <ul>
+        <li><strong>Sr. Salesforce Developer – Workday (Jul 2024 – Mar 2025)</strong><br />
+        • Led SOX-compliant ITGC project<br />
+        • Built Apex automation & Einstein integrations<br />
+        • Developed custom LWCs and enhanced Sales UX</li>
+        <li><strong>Salesforce Developer – Workday (May 2023 – Jun 2024)</strong><br />
+        • Developed triggers, batch/future/queueable methods<br />
+        • Integrated with MuleSoft APIs</li>
+        <li><strong>Salesforce Admin/Dev – Verzeo (May 2021 – Jan 2022)</strong><br />
+        • Built Visualforce mobile pages, AppExchange tools</li>
+        <li><strong>Intern – Indian Servers (Aug 2020 – Jan 2021)</strong><br />
+        • Customized Lightning pages, built LWCs</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Page 4 -->
+  <div class="page" id="page4">
+    <section class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>Lightning Datatable with Picklist Inline Editing:</strong><br />
+          Interactive LWC to manage SKU heatmap with dynamic color states and inline editing.
+          <br /><a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git" target="_blank">View on GitHub</a>
+        </li>
+        <li>
+          <strong>Dynamic Territory Manager (DTM):</strong><br />
+          Configurable engine using Apex, LWC, Platform Events, and Custom Metadata.
+          <br /><a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git" target="_blank">View on GitHub</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Page 5 -->
+  <div class="page" id="page5">
+    <section class="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:dhanushkautilya@gmail.com">dhanushkautilya@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/dhanush-kammaripalle-16aa93219">dhanush-kammaripalle</a></p>
+      <p><strong>Trailblazer:</strong> <a href="https://www.salesforce.com/trailblazer/mlb1ltng5cqorsfi3h">DhanushKammaripalle</a></p>
+
+      <h3>Certifications</h3>
+      <div class="carousel">
+        <div class="carousel-item">Administrator</div>
+        <div class="carousel-item">Platform Developer I</div>
+        <div class="carousel-item">Platform Developer II</div>
+        <div class="carousel-item">AI Associate</div>
+        <div class="carousel-item">AI Specialist</div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2025 Dhanush Kammaripalle</p>
+    </footer>
+  </div>
 </body>
 </html>
