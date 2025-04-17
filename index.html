@@ -1,134 +1,604 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dhanush Kammaripalle | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhanush Kammaripalle | Salesforce Developer | AI Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active-nav::after {
+            width: 100%;
+        }
+        
+        /* Animation for hero section */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">Dhanush Kammaripalle</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link active-nav text-gray-900 hover:text-blue-600 transition">Home</a>
+                    <a href="#about" class="nav-link text-gray-900 hover:text-blue-600 transition">About</a>
+                    <a href="#skills" class="nav-link text-gray-900 hover:text-blue-600 transition">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-900 hover:text-blue-600 transition">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-900 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-100">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-100">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-100">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-100">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-100">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Floating Scroll Nav -->
-  <nav class="floating-nav">
-    <a href="#page1">Home</a>
-    <a href="#page2">About</a>
-    <a href="#page3">Experience</a>
-    <a href="#page4">Projects</a>
-    <a href="#page5">Contact</a>
-  </nav>
-
-  <!-- Page 1 -->
-  <div class="page" id="page1">
-    <section class="header-flex">
-      <a href="https://www.salesforce.com" target="_blank">
-        <img src="assets/Salesforce-logo.jpg" class="profile-pic" alt="Salesforce Logo">
-      </a>
-      <div>
-        <h1>Thirumala Dhanush Kammaripalle</h1>
-        <p class="typed-text"></p>
-      </div>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Hi, I'm <span class="gradient-text">Dhanush Kammaripalle</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">
+                        Salesforce Developer | AI Engineer
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        I build intelligent systems and scalable applications that solve real-world problems. 
+                        Passionate about machine learning, deep learning, and creating elegant software solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg">
+                            Contact Me
+                        </a>
+                        <a href="#projects" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition">
+                            View Work
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-20 blur-xl"></div>
+                        <img src="assets/dk.jpeg" 
+                             alt="Profile" 
+                             class="relative w-full h-full rounded-full object-cover border-4 border-white shadow-xl floating">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="chatbot">
-      <h2>Ask Me Anything</h2>
-      <div id="chatbox">
-        <input type="text" id="userInput" placeholder="Ask me about my experience..." />
-        <button onclick="getBotResponse()">Ask</button>
-        <div id="chatResponse"></div>
-      </div>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4">About Me</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-12"></div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3 flex justify-center">
+                    <div class="relative w-64 h-64">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg opacity-20 blur-xl"></div>
+                        <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                             alt="Working" 
+                             class="relative w-full h-full rounded-lg object-cover border-4 border-white shadow-lg">
+                    </div>
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+                    <p class="text-gray-600 mb-6">
+                        Hi, I’m <strong>Thirumala Dhanush Kammaripalle</strong> — a lifelong tech enthusiast and someone who’s always been curious about how technology shapes the world around us. Ever since I was a kid, I found myself drawn to computers, breaking things down to understand how they work and trying to build my own ideas into reality.
+                    </p>
+                    <p>
+                      This passion led me to pursue a <strong>Bachelor’s in Computer Science</strong> from Jawaharlal Nehru Technological University and later a <strong>Master’s in Computer Science</strong> at George Mason University. During these years, I explored various domains within tech, but what stuck with me the most was the ability to use software to solve real-world problems and make things better — faster, smarter, and easier.
+                    </p>
+                    <p>
+                      Professionally, I’ve spent over 4 years working as a <strong>Salesforce Certified Developer</strong>, building and optimizing enterprise-level CRM solutions. My work spans Apex, LWC, Visualforce, and integrations across Sales, Service, and Community Clouds. I take pride in crafting solutions that not only meet business goals but also improve user experience and system scalability.
+                    </p>
+                    <p>
+                      Beyond Salesforce, I’m genuinely passionate about <strong>Artificial Intelligence</strong> and the incredible potential of <strong>Generative AI</strong> in transforming industries. I spend time learning about how these technologies can be applied in CRM, automation, personalization, and everyday tools we use.
+                    </p>
+                    <p>
+                      Outside of work, I’m a big fan of sports. I love playing and watching <strong>basketball, badminton, and cricket</strong>. Whether it’s shooting hoops with friends or catching a live match, sports keep me grounded, energized, and inspired. They’ve taught me teamwork, discipline, and how to thrive under pressure — qualities that also fuel my professional life.
+                    </p>
+                    <p>
+                      I’m always looking to learn, build, and connect with people who share the same passion for tech and innovation. Whether it's building cool stuff or exploring new ideas, I’m here for the ride 🚀.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-graduation-cap text-blue-500 mr-3"></i>
+                            <span><strong>Education:</strong> M.Sc. in Computer Science from George Mason University</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-briefcase text-blue-500 mr-3"></i>
+                            <span><strong>Experience:</strong> 3+ Years</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-500 mr-3"></i>
+                            <span><strong>Location:</strong> Fairfax, VA</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 mr-3"></i>
+                            <span><strong>Email:</strong> dhanushkautilya@gmail.com</span>
+                        </div>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                        Download Resume <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
-  </div>
 
-  <!-- Page 2 -->
-  <div class="page" id="page2">
-    <section class="about">
-      
-        <img src="assets/dk.jpeg" class="profile" alt="Dhanush">
-     
-      <h2>About Me</h2>
-      <p>
-        Hi, I’m <strong>Thirumala Dhanush Kammaripalle</strong> — a lifelong tech enthusiast and someone who’s always been curious about how technology shapes the world around us. Ever since I was a kid, I found myself drawn to computers, breaking things down to understand how they work and trying to build my own ideas into reality.
-      </p>
-      <p>
-        This passion led me to pursue a <strong>Bachelor’s in Computer Science</strong> from Jawaharlal Nehru Technological University and later a <strong>Master’s in Computer Science</strong> at George Mason University. During these years, I explored various domains within tech, but what stuck with me the most was the ability to use software to solve real-world problems and make things better — faster, smarter, and easier.
-      </p>
-      <p>
-        Professionally, I’ve spent over 4 years working as a <strong>Salesforce Certified Developer</strong>, building and optimizing enterprise-level CRM solutions. My work spans Apex, LWC, Visualforce, and integrations across Sales, Service, and Community Clouds. I take pride in crafting solutions that not only meet business goals but also improve user experience and system scalability.
-      </p>
-      <p>
-        Beyond Salesforce, I’m genuinely passionate about <strong>Artificial Intelligence</strong> and the incredible potential of <strong>Generative AI</strong> in transforming industries. I spend time learning about how these technologies can be applied in CRM, automation, personalization, and everyday tools we use.
-      </p>
-      <p>
-        Outside of work, I’m a big fan of sports. I love playing and watching <strong>basketball, badminton, and cricket</strong>. Whether it’s shooting hoops with friends or catching a live match, sports keep me grounded, energized, and inspired. They’ve taught me teamwork, discipline, and how to thrive under pressure — qualities that also fuel my professional life.
-      </p>
-      <p>
-        I’m always looking to learn, build, and connect with people who share the same passion for tech and innovation. Whether it's building cool stuff or exploring new ideas, I’m here for the ride 🚀.
-      </p>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4">My Skills</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Technical Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Apex Coding</span>
+                                <span class="text-blue-600">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">LWC|VF|Aura</span>
+                                <span class="text-blue-600">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Python</span>
+                                <span class="text-blue-600">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Deep Learning</span>
+                                <span class="text-blue-600">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Professional Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Problem Solving</span>
+                                <span class="text-blue-600">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Teamwork</span>
+                                <span class="text-blue-600">100%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Communication</span>
+                                <span class="text-blue-600">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Project Management</span>
+                                <span class="text-blue-600">100%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-semibold mt-16 mb-6">Technologies I Work With</h3>
+            <div class="flex flex-wrap gap-3">
+                <div class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center transition">
+                    <i class="fab fa-python mr-2"></i> Python
+                </div>
+                <div class="skill-badge bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full flex items-center transition">
+                    <i class="fab fa-js-square mr-2"></i> JavaScript,Html,CSS
+                </div>
+                <div class="skill-badge bg-green-100 text-green-800 px-4 py-2 rounded-full flex items-center transition">
+                    <i class="fab fa-node-js mr-2"></i> Node.js
+                </div>
+                <div class="skill-badge bg-red-100 text-red-800 px-4 py-2 rounded-full flex items-center transition">
+                    <i class="fas fa-brain mr-2"></i> Apex
+                </div>
+                <div class="skill-badge bg-purple-100 text-purple-800 px-4 py-2 rounded-full flex items-center transition">
+                    <i class="fas fa-project-diagram mr-2"></i> Visualforce,Aura
+                </div>
+                <div class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center transition">
+                    <i class="fas fa-database mr-2"></i> SQL
+                </div>
+                <div class="skill-badge bg-gray-100 text-gray-800 px-4 py-2 rounded-full flex items-center transition">
+                    <i class="fab fa-git-alt mr-2"></i> Git
+                </div>
+                <div class="skill-badge bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full flex items-center transition">
+                    <i class="fab fa-react mr-2"></i> PyTorch
+                </div>
+            
+                <div class="skill-badge bg-gray-100 text-gray-800 px-4 py-2 rounded-full flex items-center transition">
+                    <i class="fas fa-server mr-2"></i> AWS
+                </div>
+            </div>
+        </div>
     </section>
-  </div>
-  
 
-  <!-- Page 3 -->
-  <div class="page" id="page3">
-    <section class="experience">
-      <h2>Work Experience</h2>
-      <ul>
-        <li><strong>Sr. Salesforce Developer – Workday (Jul 2024 – Mar 2025)</strong><br />
-        • Led SOX-compliant ITGC project<br />
-        • Built Apex automation & Einstein integrations<br />
-        • Developed custom LWCs and enhanced Sales UX</li>
-        <li><strong>Salesforce Developer – Workday (May 2023 – Jun 2024)</strong><br />
-        • Developed triggers, batch/future/queueable methods<br />
-        • Integrated with MuleSoft APIs</li>
-        <li><strong>Salesforce Admin/Dev – Verzeo (May 2021 – Jan 2022)</strong><br />
-        • Built Visualforce mobile pages, AppExchange tools</li>
-        <li><strong>Intern – Indian Servers (Aug 2020 – Jan 2021)</strong><br />
-        • Customized Lightning pages, built LWCs</li>
-      </ul>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4">My Projects</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/html-logo.png" 
+                             alt="AI Assistant" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide">AI</span>
+                            <span class="text-gray-600 text-xs ml-2">Apex,LWC,VF</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Lightning Datatable with Picklist Inline Editing</h3>
+                        <p class="text-gray-600 mb-4">
+                            Interactive LWC to manage SKU heatmap with dynamic color states and inline editing.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git" class="text-blue-600 hover:text-blue-800 font-medium">View Project</a>
+                            <a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Medical Diagnosis" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide">ML</span>
+                            <span class="text-gray-600 text-xs ml-2">Apex,LWC</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Dynamic Territory Manager (DTM)</h3>
+                        <p class="text-gray-600 mb-4">
+                            Configurable engine using Apex, LWC, Platform Events, and Custom Metadata.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <a href="https://github.com/dhanushkautilya/SFDX_DynamicTerritoryManager.git" class="text-blue-600 hover:text-blue-800 font-medium">View Project</a>
+                            <a href="https://github.com/dhanushkautilya/SFDX_DynamicTerritoryManager.git" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Sentiment Analysis" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full uppercase font-semibold tracking-wide">NLP</span>
+                            <span class="text-gray-600 text-xs ml-2">Python, Transformers</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Sentiment Analysis API</h3>
+                        <p class="text-gray-600 mb-4">
+                            A real-time sentiment analysis service that processes social media data to gauge public opinion on topics.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">View Project</a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+            </div>
+            
+           
+        </div>
     </section>
-  </div>
 
-  <!-- Page 4 -->
-  <div class="page" id="page4">
-    <section class="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Lightning Datatable with Picklist Inline Editing:</strong><br />
-          Interactive LWC to manage SKU heatmap with dynamic color states and inline editing.
-          <br /><a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git" target="_blank">View on GitHub</a>
-        </li>
-        <li>
-          <strong>Dynamic Territory Manager (DTM):</strong><br />
-          Configurable engine using Apex, LWC, Platform Events, and Custom Metadata.
-          <br /><a href="https://github.com/dhanushkautilya/SFDX_LWC_InlineEditingLDT.git" target="_blank">View on GitHub</a>
-        </li>
-      </ul>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-12"></div>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <p class="text-gray-600 mb-8">
+                        Have a project in mind or want to discuss potential opportunities? Feel free to reach out! 
+                        I'm always open to interesting collaborations and conversations about technology.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p class="text-gray-600">dhanushkautilya@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <p class="text-gray-600">+1 (571) 471-2961</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p class="text-gray-600">Fairfax, Virginia</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-medium mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-200 hover:bg-blue-600 hover:text-white p-3 rounded-full transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-gray-200 hover:bg-gray-800 hover:text-white p-3 rounded-full transition">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="bg-gray-200 hover:bg-blue-400 hover:text-white p-3 rounded-full transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-gray-200 hover:bg-red-600 hover:text-white p-3 rounded-full transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
-  </div>
 
-  <!-- Page 5 -->
-  <div class="page" id="page5">
-    <section class="contact">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:dhanushkautilya@gmail.com">dhanushkautilya@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/dhanush-kammaripalle-16aa93219">dhanush-kammaripalle</a></p>
-      <p><strong>Trailblazer:</strong> <a href="https://www.salesforce.com/trailblazer/mlb1ltng5cqorsfi3h">DhanushKammaripalle</a></p>
-
-      <h3>Certifications</h3>
-      <div class="carousel">
-        <div class="carousel-item">Administrator</div>
-        <div class="carousel-item">Platform Developer I</div>
-        <div class="carousel-item">Platform Developer II</div>
-        <div class="carousel-item">AI Associate</div>
-        <div class="carousel-item">AI Specialist</div>
-      </div>
-    </section>
-    <footer>
-      <p>&copy; 2025 Dhanush Kammaripalle</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold gradient-text">Dhanush Kammaripalle</span>
+                    <p class="text-gray-400 mt-2">Salesforce Developer/AI Engineer</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-6 mb-4">
+                        <a href="www.linkedin.com/in/dhanush-kammaripalle-16aa93219" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/dhanushkautilya" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                       
+                    </div>
+                    <p class="text-gray-400 text-sm">© 2025 Dhanush Kammaripalle. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
     </footer>
-  </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    
+                    // Update active nav link
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active-nav');
+                    });
+                    this.classList.add('active-nav');
+                }
+            });
+        });
+        
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active-nav');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active-nav');
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Animation for project cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.project-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
